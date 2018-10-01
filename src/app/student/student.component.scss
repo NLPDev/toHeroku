@@ -1,0 +1,115 @@
+@import '../../styles-variables';
+
+.container {
+  margin-top: 20px;
+}
+.mat-card{
+  margin-bottom: 3px;
+}
+.mat-card-title{
+  font-size: 26px;
+  font-weight: bold;
+}
+.student-data-container{
+  margin-bottom: 30px;
+  > div{
+    display: grid;
+    grid-gap: 0px;
+  }
+}
+.student-data{
+  border: 1px solid #CCC;
+  box-shadow: 1px 2px 3px #CCC;
+  padding: 10px;
+  div {
+    cursor: pointer;
+  }
+  ul{
+    margin-bottom: 0px;
+    li p{
+      margin-bottom: 0px;
+    }
+  }
+}
+.data-show{
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  .mat-form-field{
+    width: 100%;
+  }
+}
+.main-content{
+  margin-top: 15px;
+}
+.course-sector {
+  display: block;
+  box-shadow: 1px 1px 9px #CCC;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 1200px)  {
+  .container{
+    max-width: 100%;
+    padding: 0 30px;
+  }
+}
+/*button {
+  margin-right: 20px;
+  width: 160px;
+}
+table {
+  width: 100%;
+}
+#importFile{
+  display: none;
+}
+mat-paginator {
+  width: 100%;
+}
+
+
+
+.main-heading {
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}
+
+mat-card {
+  margin: 0 0 20px 0;
+
+  mat-card-title {
+    position: relative;
+
+    code {
+      position: absolute;
+      top: 11px;
+      right: 0;
+      float: right;
+      font-size: 10px;
+    }
+  }
+  mat-card-subtitle {
+    min-height: 60px;
+  }
+
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    mat-card-subtitle {
+      min-height: auto;
+    }
+  }
+
+  a {
+    mat-icon {
+      position: relative;
+      top: 2px;
+      font-size: 16px;
+    }
+  }
+
+  a[mat-icon-button] {
+    position: relative;
+    top: -4px;
+    left: 5px;
+  }
+}
+*/

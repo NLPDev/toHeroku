@@ -1,0 +1,15 @@
+@import '../../styles-variables';
+
+.container {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+}
+#importFile {
+  display: none;
+}
+mat-paginator {
+  width: 100%;
+}

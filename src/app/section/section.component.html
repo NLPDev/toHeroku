@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="row">
+    <h1 class="main-heading">
+      Course Section Page
+    </h1>
+  </div>
+
+  <div class="row data-show">
+    <div class="col-md-3">
+      <h3>Properties</h3>
+      <!--
+  <div class="col-sm-12">
+    <mat-form-field>
+      <mat-select placeholder="Grade" [(ngModel)]="selectGrade" name="grade" (selectionChange)="changeGrade($event)">
+        <mat-option value="-1">All</mat-option>
+        <mat-option *ngFor="let gr of gradeArray" [value]="gr">
+          {{gr}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="col-sm-12">
+    <mat-form-field>
+      <mat-select placeholder="Department" [(ngModel)]="selectSemester" name="semester" (selectionChange)="changeSemester($event)">
+        <mat-option value="-1">All</mat-option>
+        <mat-option *ngFor="let ss of semesterArray" [value]="ss">
+          {{ss}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="col-sm-12">
+    <mat-form-field>
+      <mat-select placeholder="Subject" [(ngModel)]="selectRoom" name="room" (selectionChange)="changeRoom($event)">
+        <mat-option value="-1">All</mat-option>
+        <mat-option *ngFor="let rn of roomNameArray" [value]="rn">
+          {{rn}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="col-sm-12">
+    <mat-form-field>
+      <mat-select placeholder="Course" [(ngModel)]="selectRoom" name="room" (selectionChange)="changeRoom($event)">
+        <mat-option value="-1">All</mat-option>
+        <mat-option *ngFor="let rn of roomNameArray" [value]="rn">
+          {{rn}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+
+      -->
+    </div>
+    <div class="col-md-9 section-data-container">
+      <h3>Total Counts: {{totalAnalysis}}</h3>
+      
+        
+          <div [ngStyle]="{'grid-template-columns': gridCSS}">
+            <ng-container *ngFor="let hh of head">
+              <div class="section-data-container">
+                <div class="section-data">
+                  <div [innerHTML]="hh"></div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+
+          <div [ngStyle]="{'grid-template-columns': gridCSS}">
+            <ng-container *ngFor="let hh1 of head1">
+              <div class="section-data-container">
+                <div class="section-data">
+                  <div [innerHTML]="hh1"></div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        
+        
+      
+    </div>
+  </div>
+  
+</div>

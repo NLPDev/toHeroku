@@ -1,0 +1,118 @@
+<div class="container">
+  <div class="rows button_rows">
+    <div class="col-md-2 offset-md-10">
+      <button class="dropDownMenu" mat-button [matMenuTriggerFor]="menu">Assignments</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Assign to Teacher</button>
+        <button mat-menu-item>Assign to Date</button>
+      </mat-menu>
+    </div>
+  </div>
+  <div class="month">
+    <ul>
+      <li class="prev_year">
+        <button mat-raised-button (click)="yearTran(-1)">&#10094;&#10094;</button>
+      </li>
+      <li class="prev">
+        <button mat-raised-button (click)="monthTran(-1)">&#10094;</button>
+      </li>
+      <li class="next_year">
+        <button mat-raised-button (click)="yearTran(1)">&#10095;&#10095;</button>
+      </li>
+      <li class="next">
+        <button mat-raised-button (click)="monthTran(1)">&#10095;</button>
+      </li>
+      <li>
+        <span style="font-size:18px">{{ year }}</span> <br>
+        {{ monthString }}
+      </li>
+    </ul>
+  </div>
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="week">
+      <th mat-header-cell *matHeaderCellDef> Week </th>
+      <td mat-cell *matCellDef="let element"> {{element.week}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="week1">
+      <th mat-header-cell *matHeaderCellDef> Sun </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button class="day_buttons"  *ngIf="element.week1 != ''">{{element.week1}}</button>
+        <div class="period" *ngIf="element.week1 != ''">9 AM - 12 PM </div>
+        <div class="class_name" *ngIf="element.week1 != ''">Class {{element.week1}} </div>
+        <ng-container *ngIf="element.week1 == ''">{{element.week1}}</ng-container>
+      </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="week2">
+      <th mat-header-cell *matHeaderCellDef> Mon </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button class="day_buttons"  *ngIf="element.week2 != ''">{{element.week2}}</button>
+        <div class="period" *ngIf="element.week2 != ''">10 AM - 12 PM </div>
+        <div class="class_name" *ngIf="element.week2 != ''">Class {{element.week2}} </div>
+        <ng-container *ngIf="element.week2 == ''">{{element.week2}}</ng-container>
+      </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="week3">
+      <th mat-header-cell *matHeaderCellDef> Tue </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button class="day_buttons"  *ngIf="element.week3 != ''">{{element.week3}}</button>
+        <div class="period" *ngIf="element.week3 != ''">11 AM - 12 PM </div>
+        <div class="class_name" *ngIf="element.week3 != ''">Class {{element.week3}} </div>
+        <ng-container *ngIf="element.week3 == ''">{{element.week3}}</ng-container>
+      </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="week4">
+      <th mat-header-cell *matHeaderCellDef> Wed </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button class="day_buttons"  *ngIf="element.week4 != ''">{{element.week4}}</button>
+        <div class="period" *ngIf="element.week4 != ''">9 AM - 11 AM </div>
+        <div class="class_name" *ngIf="element.week4 != ''">Class {{element.week4}} </div>
+        <ng-container *ngIf="element.week4 == ''">{{element.week4}}</ng-container>
+      </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="week5">
+      <th mat-header-cell *matHeaderCellDef> Thu </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button class="day_buttons"  *ngIf="element.week5 != ''">{{element.week5}}</button>
+        <div class="period" *ngIf="element.week5 != ''">9 AM - 10 AM </div>
+        <div class="class_name" *ngIf="element.week5 != ''">Class {{element.week5}} </div>
+        <ng-container *ngIf="element.week6 == ''">{{element.week5}}</ng-container>
+      </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="week6">
+      <th mat-header-cell *matHeaderCellDef> Fri </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button class="day_buttons"  *ngIf="element.week6 != ''">{{element.week6}}</button>
+        <div class="period" *ngIf="element.week6 != ''">10 AM - 11 AM </div>
+        <div class="class_name" *ngIf="element.week6 != ''">Class {{element.week6}} </div>
+        <ng-container *ngIf="element.week6 == ''">{{element.week6}}</ng-container>
+      </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="week7">
+      <th mat-header-cell *matHeaderCellDef> Sat </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button class="day_buttons"  *ngIf="element.week7 != ''">{{element.week7}}</button>
+        <div class="period" *ngIf="element.week7 != ''">11 AM - 12 PM </div>
+        <div class="class_name" *ngIf="element.week7 != ''">Class {{element.week7}} </div>
+        <ng-container *ngIf="element.week7 == ''">{{element.week7}}</ng-container>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

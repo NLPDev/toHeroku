@@ -1,0 +1,110 @@
+@import '../../styles-variables';
+
+.container {
+  margin-top: 20px;
+}
+
+.button_rows{
+  padding: 0px;
+  margin-bottom: 15px;
+  & > div {
+     padding: 0px;
+  }
+}
+
+.month {
+  padding: 20px 25px;
+  width: 100%;
+  background: #03a9f4;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.month button{
+  min-width: 40px;
+}
+.month .prev, .month .prev_year {
+  float: left;
+  padding-top: 10px;
+  margin-right: 10px;
+}
+
+.month .next, .month .next_year {
+  float: right;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+table {
+  width: 100%;
+  th, td{
+    width: 12.5%;
+  }
+}
+
+
+.day_buttons {
+  background: #EEEEEE;
+}
+.period, .class_name {
+  width: 100%;
+}
+.class_name{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {
+    width: 13.1%;
+  }
+
+  .mat-cell, .mat-footer-cell.period, .class_name {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+  .mat-button {
+    min-width: auto;
+    width: 100%;
+  }
+  td.mat-cell:first-child, th.mat-header-cell:first-child {
+    padding-left: 0px;
+  }
+  td.mat-cell:last-child, th.mat-header-cell:last-child {
+    padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {
+    width: 12.5%;
+  }
+
+  .days li .active {
+    padding: 2px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {
+    width: 12.2%;
+  }
+}
+

@@ -1,0 +1,300 @@
+<div class="container">
+  <div class="row">
+    <h1 class="main-heading">
+      Schedule Page
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button mat-raised-button (click)="importData()">Import</button>
+      <button mat-raised-button (click)="exportData()">Export</button>
+      <input type="file" id="importFile" (change)="handleFileSelect($event)" />
+    </div>
+  </div>
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="school_code">
+      <th mat-header-cell *matHeaderCellDef> School Code </th>
+      <td mat-cell *matCellDef="let element"> {{element.school_code}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="school_year">
+      <th mat-header-cell *matHeaderCellDef> School Year </th>
+      <td mat-cell *matCellDef="let element"> {{element.school_year}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="student">
+      <th mat-header-cell *matHeaderCellDef> Schedule </th>
+      <td mat-cell *matCellDef="let element"> {{element.student}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="course_code">
+      <th mat-header-cell *matHeaderCellDef> Course Code </th>
+      <td mat-cell *matCellDef="let element"> {{element.course_code}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="course_section">
+      <th mat-header-cell *matHeaderCellDef> Course Section </th>
+      <td mat-cell *matCellDef="let element"> {{element.course_section}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="grade">
+      <th mat-header-cell *matHeaderCellDef> Grade </th>
+      <td mat-cell *matCellDef="let element"> {{element.grade}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="semester">
+      <th mat-header-cell *matHeaderCellDef> Semester </th>
+      <td mat-cell *matCellDef="let element"> {{element.semester}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="term">
+      <th mat-header-cell *matHeaderCellDef> Term </th>
+      <td mat-cell *matCellDef="let element"> {{element.term}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="block">
+      <th mat-header-cell *matHeaderCellDef> Block </th>
+      <td mat-cell *matCellDef="let element"> {{element.block}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="room_no">
+      <th mat-header-cell *matHeaderCellDef> Room NO </th>
+      <td mat-cell *matCellDef="let element"> {{element.room_no}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="class_code">
+      <th mat-header-cell *matHeaderCellDef> Class Code </th>
+      <td mat-cell *matCellDef="let element"> {{element.class_code}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="10" [length]="100" showFirstLastButtons></mat-paginator>
+  <!-- <div class="row">
+    <div class="col-md-12">
+      <h1 class="main-heading">{{ 'anms.student.title' | translate }}</h1>
+    </div>
+  </div>
+  <div class="row align-items-end">
+    <div class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+      <mat-card>
+        <mat-card-title><code>{{versions.angular}}</code>Angular</mat-card-title>
+        <mat-card-subtitle>
+          {{ 'anms.student.angular' | translate }}
+        </mat-card-subtitle>
+        <mat-card-actions>
+          <a mat-icon-button href="https://github.com/angular/angular" target="_blank">
+            <mat-icon fontSet="fab" fontIcon="fa-github"></mat-icon>
+          </a>
+          <a mat-button href="https://angular.io/docs/ts/latest/" target="_blank">
+            <mat-icon fontSet="fas" fontIcon="fa-book"></mat-icon>
+            {{ 'anms.student.documentation' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+      <mat-card>
+        <mat-card-title><code>{{versions.material}}</code>Angular Material</mat-card-title>
+        <mat-card-subtitle>
+          {{ 'anms.student.angular-material' | translate }}
+        </mat-card-subtitle>
+        <mat-card-actions>
+          <a mat-icon-button href="https://github.com/angular/material2/" target="_blank">
+            <mat-icon fontSet="fab" fontIcon="fa-github"></mat-icon>
+          </a>
+          <a mat-button href="https://material.angular.io/" target="_blank">
+            <mat-icon fontSet="fas" fontIcon="fa-book"></mat-icon>
+            {{ 'anms.student.documentation' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+      <mat-card>
+        <mat-card-title><code>{{versions.angularCli}}</code>Angular Cli</mat-card-title>
+        <mat-card-subtitle>
+          {{ 'anms.student.angular-cli' | translate }}
+        </mat-card-subtitle>
+        <mat-card-actions>
+          <a mat-icon-button href="https://github.com/angular/angular-cli"
+             target="_blank">
+            <mat-icon fontSet="fab" fontIcon="fa-github"></mat-icon>
+          </a>
+          <a mat-button href="https://cli.angular.io/" target="_blank">
+            <mat-icon fontSet="fas" fontIcon="fa-book"></mat-icon>
+            {{ 'anms.student.documentation' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+      <mat-card>
+        <mat-card-title><code>{{versions.ngrx}}</code>NgRx</mat-card-title>
+        <mat-card-subtitle>
+          {{ 'anms.student.ngrx' | translate }}
+        </mat-card-subtitle>
+        <mat-card-actions>
+          <a mat-icon-button href="https://github.com/ngrx/platform" target="_blank">
+            <mat-icon fontSet="fab" fontIcon="fa-github"></mat-icon>
+          </a>
+          <a mat-button href="http://ngrx.github.io/" target="_blank">
+            <mat-icon fontSet="fas" fontIcon="fa-book"></mat-icon>
+            {{ 'anms.student.documentation' | translate }}
+          </a>
+          <a mat-button
+             href="https://medium.com/@tomastrajan/object-assign-vs-object-spread-in-angular-ngrx-reducers-3d62ecb4a4b0"
+             target="_blank">
+            <mat-icon fontSet="fab" fontIcon="fa-medium-m"></mat-icon>
+            {{ 'anms.student.guide' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+      <mat-card>
+        <mat-card-title><code>{{versions.rxjs}}</code>RxJS</mat-card-title>
+        <mat-card-subtitle>
+          {{ 'anms.student.rxjs' | translate }}
+        </mat-card-subtitle>
+        <mat-card-actions>
+          <a mat-icon-button href="https://github.com/ReactiveX/RxJS" target="_blank">
+            <mat-icon fontSet="fab" fontIcon="fa-github"></mat-icon>
+          </a>
+          <a mat-button href="http://reactivex.io/rxjs/" target="_blank">
+            <mat-icon fontSet="fas" fontIcon="fa-book"></mat-icon>
+            {{ 'anms.student.documentation' | translate }}
+          </a>
+          <a mat-button
+             href="https://medium.com/@tomastrajan/practical-rxjs-in-the-wild-requests-with-concatmap-vs-mergemap-vs-forkjoin-11e5b2efe293"
+             target="_blank">
+            <mat-icon fontSet="fab" fontIcon="fa-medium-m"></mat-icon>
+            {{ 'anms.student.guide' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+      <mat-card>
+        <mat-card-title><code>{{versions.bootstrap}}</code>Bootstrap</mat-card-title>
+        <mat-card-subtitle>
+          {{ 'anms.student.bootstrap' | translate }}
+        </mat-card-subtitle>
+        <mat-card-actions>
+          <a mat-icon-button href="https://github.com/twbs/bootstrap" target="_blank">
+            <mat-icon fontSet="fab" fontIcon="fa-github"></mat-icon>
+          </a>
+          <a mat-button href="https://getbootstrap.com/docs/4.0/layout/grid/"
+             target="_blank">
+            <mat-icon fontSet="fas" fontIcon="fa-book"></mat-icon>
+            {{ 'anms.student.documentation' | translate }}
+          </a>
+          <a mat-button
+             href="https://medium.com/@tomastrajan/how-to-build-responsive-layouts-with-bootstrap-4-and-angular-6-cfbb108d797b"
+             target="_blank">
+            <mat-icon fontSet="fab" fontIcon="fa-medium-m"></mat-icon>
+            {{ 'anms.student.guide' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+      <mat-card>
+        <mat-card-title><code>{{versions.typescript}}</code> Typescript</mat-card-title>
+        <mat-card-subtitle>{{ 'anms.student.typescript' | translate }}
+        </mat-card-subtitle>
+        <mat-card-actions>
+          <a mat-icon-button href="https://github.com/Microsoft/TypeScript"
+             target="_blank">
+            <mat-icon fontSet="fab" fontIcon="fa-github"></mat-icon>
+          </a>
+          <a mat-button href="https://www.typescriptlang.org/docs/home.html" target="_blank">
+            <mat-icon fontSet="fas" fontIcon="fa-book"></mat-icon>
+            {{ 'anms.student.documentation' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+      <mat-card>
+        <mat-card-title><code>{{versions.ngxtranslate}}</code> I18n
+        </mat-card-title>
+        <mat-card-subtitle>{{ 'anms.student.ngxtranslate' | translate }}
+          (ngx-translate)
+        </mat-card-subtitle>
+        <mat-card-actions>
+          <a mat-icon-button href="https://github.com/ngx-translate/core"
+             target="_blank">
+            <mat-icon fontSet="fab" fontIcon="fa-github"></mat-icon>
+          </a>
+          <a mat-button href="http://www.ngx-translate.com/" target="_blank">
+            <mat-icon fontSet="fas" fontIcon="fa-book"></mat-icon>
+            {{ 'anms.student.documentation' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+      <mat-card>
+        <mat-card-title><code>{{versions.fontAwesome}}</code> Font Awesome 5
+        </mat-card-title>
+        <mat-card-subtitle>{{ 'anms.student.fontawesome' | translate }}
+        </mat-card-subtitle>
+        <mat-card-actions>
+          <a mat-icon-button href="https://github.com/FortAwesome/Font-Awesome"
+             target="_blank">
+            <mat-icon fontSet="fab" fontIcon="fa-github"></mat-icon>
+          </a>
+          <a mat-button href="https://fontawesome.com/icons" target="_blank">
+            <mat-icon fontSet="fas" fontIcon="fa-book"></mat-icon>
+            {{ 'anms.student.documentation' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+      <mat-card>
+        <mat-card-title>{{ 'anms.student.themes.title' | translate }}</mat-card-title>
+        <mat-card-subtitle>{{ 'anms.student.themes' | translate }}</mat-card-subtitle>
+        <mat-card-actions>
+          <a mat-button href="https://material.angular.io/guide/theming" target="_blank">
+            <mat-icon fontSet="fas" fontIcon="fa-book"></mat-icon>
+            {{ 'anms.student.documentation' | translate }}
+          </a>
+          <a mat-button href="https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1" target="_blank">
+            <mat-icon fontSet="fab" fontIcon="fa-medium-m"></mat-icon>
+            {{ 'anms.student.guide' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+      <mat-card>
+        <mat-card-title>{{ 'anms.student.lazyloading.title' | translate }}
+        </mat-card-title>
+        <mat-card-subtitle>{{ 'anms.student.lazyloading' | translate }}
+        </mat-card-subtitle>
+        <mat-card-actions>
+          <a mat-button href="https://angular.io/docs/ts/latest/guide/router.html#!#lazy-loading-route-config" target="_blank">
+            <mat-icon fontSet="fas" fontIcon="fa-book"></mat-icon>
+            {{ 'anms.student.documentation' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div> -->
+</div>

@@ -1,0 +1,43 @@
+<div class="container">
+	<div class="row">
+    <h1 class="main-heading">
+      Class page
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Input the number of classes</h4>
+      <label>
+        <ng-container *ngIf="!editable">Classes: {{numberOfClass}}</ng-container>
+        <mat-form-field *ngIf="editable">
+          <input matInput placeholder="Number Of Classes" [(ngModel)]="tempClass" />
+        </mat-form-field>
+      </label>
+    </div>
+    <div class="col-md-6">
+      <button mat-raised-button *ngIf="!editable" (click)="editNumber()">Edit</button>
+      <button mat-raised-button *ngIf="editable" (click)="updateNumber()">Update</button>
+    </div>
+  </div>
+  <br />
+  <hr />
+  <h4>There are {{numberOfClass}} classes in the school. Please input the detailed information.</h4>
+  <ng-container *ngFor="let cls of classes;let i=index">
+    <div class="row eachRow">
+      <div class="col-md-4">
+          {{(i+1)}}<ng-container *ngIf="i===0">st</ng-container><ng-container *ngIf="i===1">nd</ng-container><ng-container *ngIf="i>1">st</ng-container>
+          Class: 
+      </div>
+      <div class="col-md-4">
+          <ng-container *ngIf="!cls[1]">{{cls[0]}}</ng-container>
+          <mat-form-field *ngIf="cls[1]">
+            <input matInput placeholder="Name" [(ngModel)]="tempClass" />
+          </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <button mat-raised-button *ngIf="!cls[1]" (click)="editClass(i)">Edit</button>
+        <button mat-raised-button *ngIf="cls[1]" (click)="updateClass(i)">Update</button>
+      </div>
+    </div>  
+  </ng-container>
+</div>

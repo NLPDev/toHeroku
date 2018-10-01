@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <h1 class="main-heading">
+      Period Page
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Input max period in a day</h4>
+      <label>
+        <ng-container *ngIf="!editable">Max Period: {{maxPeriod}}</ng-container>
+        <mat-form-field *ngIf="editable">
+          <input matInput placeholder="Max Period" [(ngModel)]="tempPeriod" />
+        </mat-form-field>
+      </label>
+    </div>
+    <div class="col-md-6">
+      <button mat-raised-button *ngIf="!editable" (click)="editNumber()">Edit</button>
+      <button mat-raised-button *ngIf="editable" (click)="updateNumber()">Update</button>
+    </div>
+  </div>
+  <br />
+  <hr />
+  
+  <h4>There are {{numberOfClass}} classes in the school. Please input available period for each classes.</h4>
+  <ng-container *ngFor="let period of periods;let i=index">
+    <div class="row eachRow">
+      <div class="col-md-4">
+          {{(i+1)}}<ng-container *ngIf="i===0">st</ng-container><ng-container *ngIf="i===1">nd</ng-container><ng-container *ngIf="i>1">st</ng-container>
+          Period: 
+      </div>
+      <div class="col-md-4">
+          <ng-container *ngIf="!period[1]">{{period[0]}}</ng-container>
+          <mat-form-field *ngIf="period[1]">
+            <input matInput placeholder="Period" [(ngModel)]="tempPeriod" />
+          </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <button mat-raised-button *ngIf="!period[1]" (click)="editPeriod(i)">Edit</button>
+        <button mat-raised-button *ngIf="period[1]" (click)="updatePeriod(i)">Update</button>
+      </div>
+    </div>  
+  </ng-container>
+</div>

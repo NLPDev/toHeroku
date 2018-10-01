@@ -1,0 +1,45 @@
+@import '../../styles-variables';
+
+.container {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.mat-card{
+  margin-bottom: 3px;
+}
+.mat-card-title{
+  font-size: 26px;
+  font-weight: bold;
+}
+.teacher-data-container{
+  > div{
+    display: grid;
+  }
+}
+.teacher-data{
+  border: 1px solid #CCC;
+  box-shadow: 1px 2px 3px #CCC;
+  padding: 10px;
+  div {
+    cursor: pointer;
+  }
+  ul{
+    margin-bottom: 0px;
+    li p{
+      margin-bottom: 0px;
+    }
+  }
+}
+.data-show{
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  .mat-form-field{
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px)  {
+  .container{
+    max-width: 100%;
+    padding: 0 30px;
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "projectName": "angular-ngrx-material-starter",
+  "projectOwner": "tomastrajan",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "tomastrajan",
+      "name": "Tomas Trajan",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/3764868?v=4",
+      "profile": "https://medium.com/@tomastrajan",
+      "contributions": [
+        "code",
+        "doc",
+        "test",
+        "design",
+        "blog"
+      ]
+    },
+    {
+      "login": "timdeschryver",
+      "name": "Tim Deschryver",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/28659384?v=4",
+      "profile": "https://twitter.com/tim_deschryver",
+      "contributions": [
+        "code",
+        "review",
+        "ideas",
+        "doc"
+      ]
+    },
+    {
+      "login": "shootermv",
+      "name": "Moshe",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1336862?v=4",
+      "profile": "http://gs500coder.blogspot.com",
+      "contributions": [
+        "code",
+        "test",
+        "bug"
+      ]
+    },
+    {
+      "login": "hhubik",
+      "name": "hhubik",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/14813201?v=4",
+      "profile": "https://github.com/hhubik",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "mumairofficial",
+      "name": "Muhammad Umair",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6498132?v=4",
+      "profile": "https://github.com/mumairofficial",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "philmerrell",
+      "name": "Phil Merrell",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/2514268?v=4",
+      "profile": "https://github.com/philmerrell",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Arelav",
+      "name": "Valery Kharshats",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1059539?v=4",
+      "profile": "https://www.linkedin.com/in/kharshats",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "1nv1n",
+      "name": "Neil Pathare",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3885804?v=4",
+      "profile": "https://1nv1n.GitHub.io/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "peterkrieg",
+      "name": "Peter Krieg",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7385488?v=4",
+      "profile": "http://peterkrieg.com",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "alexkonovalov",
+      "name": "Alex",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/11887873?v=4",
+      "profile": "https://github.com/alexkonovalov",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "scheifi",
+      "name": "Fiona",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/42332935?v=4",
+      "profile": "https://github.com/scheifi",
+      "contributions": [
+        "code",
+        "translation"
+      ]
+    },
+    {
+      "login": "FabienDehopre",
+      "name": "Fabien Dehopré",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/97023?v=4",
+      "profile": "https://www.dehopre.com",
+      "contributions": [
+        "code",
+        "translation"
+      ]
+    },
+    {
+      "login": "matiasiglesias",
+      "name": "Matias Iglesias",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/2591889?v=4",
+      "profile": "http://www.matiasiglesias.com.ar",
+      "contributions": [
+        "code",
+        "translation"
+      ]
+    },
+    {
+      "login": "Jeykairis",
+      "name": "Jeremy Kairis",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/10895934?v=4",
+      "profile": "https://github.com/Jeykairis",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    }
+  ]
+}
