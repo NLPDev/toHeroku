@@ -48,36 +48,36 @@ export class AppComponent implements OnInit, OnDestroy {
     // { link: 'school', label: 'anms.menu.school' },
     // { link: 'semester', label: 'anms.menu.semester' },
     // { link: 'period', label: 'anms.menu.period' },
-    { link: 'room', label: 'anms.menu.room' },
-    { link: 'teacher', label: 'anms.menu.teacher' },
+    { link: 'room', label: 'Room Utilization' },
+    { link: 'teacher', label: 'Teacher Assignments' },
     // { link: 'course', label: 'anms.menu.course' },
     // { link: 'section', label: 'anms.menu.section' },
     // { link: 'class', label: 'anms.menu.class' },
-    { link: 'student', label: 'anms.menu.student' },
+    { link: 'student', label: 'Student List' },
 
-    { link: 'schedule', label: 'anms.menu.schedule' }
+    { link: 'schedule', label: 'Master Schedule' }
     //{ link: 'about', label: 'anms.menu.about' }
 
   ];
 
   navigation_setup = [
-    { link: 'school', label: 'anms.menu.school' },
-    { link: 'semester', label: 'anms.menu.semester' },
-    { link: 'period', label: 'anms.menu.period' },
+    { link: 'school', label: 'School' },
+    { link: 'semester', label: 'Semester' },
+    { link: 'period', label: 'Period' },
 
-    { link: 'course', label: 'anms.menu.course' },
-    { link: 'section', label: 'anms.menu.section' },
-    { link: 'class', label: 'anms.menu.class' },
-    { link: 'roomedit', label: 'anms.menu.roomedit' }
+    { link: 'course', label: 'Course' },
+    { link: 'section', label: 'Section' },
+    { link: 'class', label: 'Class' },
+    { link: 'roomedit', label: 'Roomedit' }
   ];
 
 
-  navigation_about = [{ link: 'about', label: 'anms.menu.about' }];
+  navigation_about = [{ link: 'about', label: 'About' }];
 
 
   navigationSideMenu = [
     ...this.navigation,
-    { link: 'settings', label: 'anms.menu.settings' }
+    { link: 'settings', label: 'Settings' }
   ];
 
   settings: SettingsState;

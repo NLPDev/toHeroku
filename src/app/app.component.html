@@ -3,12 +3,12 @@
   <mat-sidenav #sidenav mode="push">
     <div class="branding">
       <img [src]="logo"/>
-      <span>{{ 'anms.title.short' | translate}}</span>
+      <span>Scheduling</span>
     </div>
     <mat-nav-list>
       <a mat-list-item *ngFor="let item of navigationSideMenu" (click)="sidenav.close()"
          [routerLink]="[item.link]" routerLinkActive="active">
-        {{item.label | translate}}
+        {{ item.label }}
       </a>
     </mat-nav-list>
   </mat-sidenav>
@@ -23,27 +23,27 @@
           <img [src]="logo"/></span>
       <span routerLink=""
             class="branding spacer center d-none d-sm-inline d-md-none"><img
-        [src]="logo"/> {{ 'anms.title.short' | translate }}</span>
+        [src]="logo"/> Schedule</span>
       <span routerLink="" class="branding spacer d-none d-md-inline"><img
-        [src]="logo"/> {{ 'anms.title' | translate }}</span>
+        [src]="logo"/> Schedule Website</span>
 
       <span class="d-none d-md-inline">
           <button mat-button class="nav-button" *ngFor="let item of navigation"
                   [routerLink]="[item.link]" routerLinkActive="active">
-            {{item.label | translate}}
+            {{ item.label }}
           </button>
       </span>
 
       <button mat-button [matMenuTriggerFor]="menu">Setup</button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item *ngFor="let item of navigation_setup" [routerLink]="[item.link]" routerLinkActive="active">{{item.label | translate}}</button>
+          <button mat-menu-item *ngFor="let item of navigation_setup" [routerLink]="[item.link]" routerLinkActive="active">{{ item.label }}</button>
           
         </mat-menu>
 
       <span class="d-none d-md-inline">
           <button mat-button class="nav-button" *ngFor="let item of navigation_about"
                   [routerLink]="[item.link]" routerLinkActive="active">
-            {{item.label | translate}}
+            {{ item.label }}
           </button>
       </span>
 
