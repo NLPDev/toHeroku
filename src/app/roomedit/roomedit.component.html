@@ -5,11 +5,11 @@
   <div class="row data-show">
     <div class="col-md-2">
       <div class="col-sm-12">
-        <button mat-raised-button [disabled]="(totalAnalysis === 0)" (click)="exportData()">Export</button>
-      </div>
+        <!-- <button mat-raised-button [disabled]="(totalAnalysis === 0)" (click)="exportData()">Export</button>
+      </div> -->
     </div>
     <div class="col-md-10">
-      <h3>Total Counts: {{totalAnalysis}}</h3>
+      <!-- <h3>Total Counts: {{totalAnalysis}}</h3> -->
       <div>
         <form>
           Year
@@ -86,7 +86,7 @@
         <mat-paginator [pageSizeOptions]="[5, 10, 20]" [pageSize]="10" [length]="100" showFirstLastButtons></mat-paginator>
       </div>
       <div class="room-data-container">
-        <ng-container *ngFor="let ro of roomObj;let i=index">
+        <!-- <ng-container *ngFor="let ro of roomObj;let i=index">
           <div [ngStyle]="{'grid-template-columns': gridCSS}">
             <ng-container *ngFor="let each of ro;let j=index">
               <div class="room-data" [ngStyle]="{'background': each[1]}">
@@ -94,7 +94,7 @@
               </div>
             </ng-container>
           </div>
-        </ng-container>
+        </ng-container> -->
       </div>
     </div>
   </div>
